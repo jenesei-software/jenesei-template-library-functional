@@ -1,4 +1,4 @@
-# jenesei-template-library-ui-react
+# jenesei-template-library-functional
 
 This is a template for functional typescript library from Jenesei Software.
 
