@@ -1,15 +1,10 @@
 /* eslint-disable no-undef */
 import path, { resolve } from 'path'
-import { visualizer } from 'rollup-plugin-visualizer'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 import { peerDependencies } from './package.json'
-
-const isDev = process.env.NODE_ENV === 'dev'
-
-console.log('isDev: ', String(isDev))
 
 export default defineConfig(() => {
   return {
@@ -20,13 +15,6 @@ export default defineConfig(() => {
     },
     plugins: [
       tsconfigPaths(),
-      isDev &&
-        visualizer({
-          open: true,
-          filename: 'stats.html',
-          gzipSize: true,
-          brotliSize: true
-        }),
       dts({
         include: ['src/'],
         exclude: [],
