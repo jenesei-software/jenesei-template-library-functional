@@ -14,6 +14,9 @@ export default [
     plugins: {
       prettier: pluginPrettier
     },
+    globals: {
+      __dirname: true
+    },
     rules: {
       'prettier/prettier': 'error',
       'no-unused-vars': 'off',
