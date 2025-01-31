@@ -6,16 +6,21 @@ import pluginTypescript from 'typescript-eslint'
 
 export default [
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
-  { languageOptions: { globals: globals.browser } },
+  {
+    languageOptions: {
+      parser: pluginTypescript.parser,
+      globals: {
+        ...globals.node,
+        ...globals.browser
+      }
+    }
+  },
   ...pluginTypescript.configs.recommended,
   pluginJs.configs.recommended,
   configPrettier,
   {
     plugins: {
       prettier: pluginPrettier
-    },
-    globals: {
-      __dirname: true
     },
     rules: {
       'prettier/prettier': 'error',
