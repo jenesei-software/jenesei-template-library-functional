@@ -36,8 +36,6 @@ export default defineConfig(() => {
       },
       lib: {
         entry: {
-          main: resolve(__dirname, 'src/main.ts'),
-
           ['function-test']: resolve(__dirname, 'src/functions/test/index.ts')
         },
         formats: ['es', 'cjs'],

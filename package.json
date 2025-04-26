@@ -6,9 +6,6 @@
     "type": "git",
     "url": "git+https://github.com/jenesei-software/library-name.git"
   },
-  "module": "./build/main.es.js",
-  "main": "./build/main.cjs.js",
-  "types": "./build/main.d.ts",
   "license": "MIT",
   "type": "module",
   "files": [
@@ -24,11 +21,6 @@
       "import": "./build/function-test.es.js",
       "require": "./build/function-test.cjs.js",
       "types": "./build/function-test.d.ts"
-    },
-    ".": {
-      "import": "./build/main.es.js",
-      "require": "./build/main.cjs.js",
-      "types": "./build/main.d.ts"
     }
   },
   "scripts": {
