@@ -2,6 +2,7 @@ import path, { resolve } from 'path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import { pluginUpdateReadmePD } from '@jenesei-software/jenesei-plugin-vite'
 
 import { peerDependencies } from './package.json'
 
@@ -13,6 +14,11 @@ export default defineConfig(() => {
       }
     },
     plugins: [
+       pluginUpdateReadmePD({
+        insertionPoint: '## Peer Dependencies',
+        pathReadme: path.resolve(__dirname, './README.md'),
+        pathPackageJson: path.resolve(__dirname, './package.json')
+      }),
       tsconfigPaths(),
       dts({
         include: ['src/'],
