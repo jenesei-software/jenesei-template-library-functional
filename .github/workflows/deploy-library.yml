@@ -1,33 +1,44 @@
-name: Library Publish Wrapper
+name: deploy-library
 
 on:
   workflow_dispatch:
     inputs:
       registry_type:
-        description: 'Registry type'
+        description: "Registry type"
         required: true
-        default: 'github'
+        default: "github"
         type: choice
         options:
           - npm
           - github
           - all
       version_type:
-        description: 'Version bump'
+        description: "Version bump"
         required: true
-        default: 'patch'
+        default: "patch"
         type: choice
         options:
           - major
           - minor
           - patch
+      package_manager:
+        description: "Package manager"
+        required: false
+        default: "npm"
+        type: choice
+        options:
+          - npm
+          - yarn
+          - bun
+          - pnpm
 
 jobs:
   call-publisher:
-    uses: jenesei-software/.github/.github/workflows/library_publish.yml@main
+    uses: jenesei-software/.github/.github/workflows/deploy-library.yml@main
     with:
       registry_type: ${{ inputs.registry_type }}
       version_type: ${{ inputs.version_type }}
+      package_manager: ${{ inputs.package_manager }}
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_CYRILSTRONE_TOKEN }}
       ACCESS_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
