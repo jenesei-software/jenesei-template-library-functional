@@ -1,10 +1,10 @@
 {
   "author": "Cyril Strone",
-  "name": "@jenesei-software/jenesei-plugin-vite",
+  "name": "@jenesei-software/library-name",
   "version": "2.2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jenesei-software/jenesei-plugin-vite.git"
+    "url": "git+https://github.com/jenesei-software/library-name.git"
   },
   "license": "MIT",
   "type": "module",
@@ -34,7 +34,6 @@
     "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
-    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.12",
