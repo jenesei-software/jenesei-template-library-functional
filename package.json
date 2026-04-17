@@ -1,10 +1,10 @@
 {
   "author": "Cyril Strone",
-  "name": "library-name",
-  "version": "0.0.1",
+  "name": "@jenesei-software/jenesei-plugin-vite",
+  "version": "2.2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/library-name.git"
+    "url": "git+https://github.com/jenesei-software/jenesei-plugin-vite.git"
   },
   "license": "MIT",
   "type": "module",
@@ -23,9 +23,8 @@
   },
   "scripts": {
     "bundle-visualizer": "npx vite-bundle-visualizer",
-    "build:storybook": "cross-env NODE_ENV=bundle-analyzer tsc && vite build",
-    "build": "tsc && vite build",
-    "build:main": "tsc && vite build",
+    "build": "vite build",
+    "build:main": "vite build",
     "biome:lint": "biome lint src",
     "biome:lint:check": "biome lint src --no-fix",
     "biome:format": "biome format --write src",
