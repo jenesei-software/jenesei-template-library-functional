@@ -35,6 +35,7 @@ export default defineConfig(() => {
         fileName: (format, name) => `${name}.${format}.js`,
       },
       rollupOptions: {
+        // Add external dependencies that shouldn't be bundled into the library
         external: [],
         output: {
           globals: {},
