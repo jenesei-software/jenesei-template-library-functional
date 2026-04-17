@@ -35,7 +35,7 @@ export default defineConfig(() => {
         fileName: (format, name) => `${name}.${format}.js`,
       },
       rollupOptions: {
-        external: ['fs', 'path', 'os', 'sharp'],
+        external: [],
         output: {
           globals: {},
         },
