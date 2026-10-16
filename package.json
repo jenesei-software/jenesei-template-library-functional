@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/jenesei-software/library-name.git"
   },
+  "packageManager": "yarn@1.22.22",
   "license": "MIT",
   "type": "module",
   "files": [

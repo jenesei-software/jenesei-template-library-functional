@@ -33,8 +33,8 @@ Use npm.
 
 ```bash
 npm run typecheck
-npm run biome:lint:check
-npm run biome:format:check
+npm run biome:lint
+npm run biome:format
 npm run build
 ```
 
@@ -42,7 +42,7 @@ Minimum validation:
 
 ```bash
 npm run typecheck
-npm run biome:lint:check
+npm run biome:lint
 npm run build
 ```
 
